@@ -26,7 +26,7 @@ public class FileChooser extends CordovaPlugin {
 
             String[] mimes = null;
 
-            if (args.getJSONArray(0) != null) {
+            if (args.getJSONArray(0) != null && args.getJSONArray(0).length() > 0) {
                 mimes = new String[args.getJSONArray(0).length()];
                 for (int i =0; i < args.getJSONArray(0).length(); i++) {
                     mimes[i] = args.getJSONArray(0).getString(i);
